@@ -13,7 +13,7 @@ typedef struct LNode{
 Status InitList(LinkList &L){
     //初始化为空链表
     L=new LNode;
-    L->next=NULL;
+    L->next=L;
     L->data=0;
     return OK;
 }
@@ -21,7 +21,7 @@ Status InitList(LinkList &L){
 LinkList CreateList_Head(int n){
     //以头插法建立长度为n的单链表
     LinkList L=new LNode;//头指针
-    L->next=NULL;
+    L->next=L;
     L->data=n;//头结点数据域存放表长
     for(int i=0;i<n;i++){
         LinkList p=new LNode;
@@ -36,12 +36,12 @@ LinkList CreateList_Tail(int n){
     //以尾插法建立长度为n的单链表
     LinkList L=new LNode;
     L->data=n;
-    L->next=NULL;
+    L->next=L;
     LinkList q=L;//尾指针
     for(int i=0;i<n;i++){
         LinkList p = new LNode;
         cin>>p->data;
-        p->next=NULL;
+        p->next=L;
         q->next=p;
         q=p;
     }
@@ -50,9 +50,10 @@ LinkList CreateList_Tail(int n){
 
 void TraverseList(LinkList L){
     //遍历链表
-    while(L->next){
-        cout<<L->next->data<<" ";
-        L=L->next;
+    LinkList p=L;
+    while(p->next!=L){
+        cout<<p->next->data<<" ";
+        p=p->next;
     }
 }
 
@@ -71,7 +72,7 @@ int LocateElem(LinkList L,ElemType e){
     int i;
     for(i=1;(p->data)!=e;i++){
         p=p->next;
-        if(!p) return -1;
+        if(p==L) return -1;
     }
     return i;
 }
