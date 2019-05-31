@@ -35,7 +35,7 @@ LinkList CreateList_Head(int n){
 LinkList CreateList_Tail(int n){
     //以尾插法建立长度为n的单链表
     LinkList L=new LNode;
-    L->data=n;
+    L->data=n;//首元结点保存表长
     L->next=NULL;
     LinkList q=L;//尾指针
     for(int i=0;i<n;i++){
@@ -109,7 +109,7 @@ int main(){
     LinkList L=CreateList_Tail(5);
     TraverseList(L);
     cout<<endl<<GetElem(L,4)<<endl;
-    ListInsert(L,6,9);
+    ListInsert(L,6,6);
     TraverseList(L);
     cout<<endl;
     ListDelete(L,6);
