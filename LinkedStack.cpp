@@ -13,6 +13,7 @@ typedef struct LSNode{
 LStack InitStack(){
     LStack S = new LSNode;
     S->next==NULL;
+    return S;
 }
 
 Status Push(LStack &S, ElemType e){
