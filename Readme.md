@@ -4,3 +4,4 @@
 * SinglyLinkedList-------线性表_链表_单链表
 * CircularLinkedList-----线性表_链表_单循环链表
 * DoubleLinkedList-------线性表_链表_双向链表
+* SequentialStack--------栈_顺序栈
