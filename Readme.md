@@ -8,4 +8,4 @@
 * LinkedStack------------栈_链栈
 * SequentialQueue--------队列_顺序队列
 * LinkedQueue------------队列_链队列
-* CircularQueue----------循环队列
+* CircularQueue----------队列_循环队列
