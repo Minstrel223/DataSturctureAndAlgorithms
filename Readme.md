@@ -6,3 +6,6 @@
 * DoubleLinkedList-------线性表_链表_双向链表
 * SequentialStack--------栈_顺序栈
 * LinkedStack------------栈_链栈
+* SequentialQueue--------队列_顺序队列
+* LinkedQueue------------队列_链队列
+* CircularQueue----------循环队列
